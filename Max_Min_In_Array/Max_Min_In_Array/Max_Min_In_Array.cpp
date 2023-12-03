@@ -28,4 +28,20 @@ int main() {
 	}
 		cout << "\n\n The Maximan Value of Result is: " << max << endl;
 		cout << " The Minimun Value of Result is: " << min << endl;
+		
+		int count = 0;
+
+		for (int  i = 0; i < sizeOfArray; i++)
+		{
+			for (int j = 0; j < sizeOfArray; j++)
+			{
+				if (result[i] == result[j])
+				{
+					count++;
+				}
+			}
+
+			cout << "The number of itteration " << result[i] << " is " << count << endl;
+			count = 0;
+		}
 }
