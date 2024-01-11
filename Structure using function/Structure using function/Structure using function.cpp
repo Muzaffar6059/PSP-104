@@ -62,9 +62,9 @@ int main() {
     cout << "Book Records:\n";
     // Display table header
     cout << setw(15) << left << "Title"
-        << setw(20) << left << "Author"
-        << setw(10) << left << "Year"
-        << setw(10) << left << "Price" << endl;
+        << setw(23) << left << "Author"
+        << setw(15) << left << "Year"
+        << setw(2) << left << "Price" << endl;
     displayBookRecords(books, numBooks);
 
     return 0;
@@ -126,8 +126,8 @@ void displayBookRecords(Book books[], int numBooks) {
     // Display each book's record
     for (int i = 0; i < numBooks; ++i) {
         cout << setw(15) << left << books[i].title
-            << setw(20) << left << books[i].author
-            << setw(10) << left << books[i].year
-            << setw(10) << left << "$" << fixed << setprecision(1) << books[i].price << endl;
+            << setw(23) << left << books[i].author
+            << setw(15) << left << books[i].year
+            << setw(2) << left << "$" << fixed << setprecision(2) << books[i].price << endl;
     }
 }
