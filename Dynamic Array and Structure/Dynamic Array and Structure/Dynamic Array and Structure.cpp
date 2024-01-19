@@ -21,10 +21,23 @@ void readData(S &std) {
 
 }
 
-void Display(S *std) {
-    cout << setw(20) << left << std->name;
-    cout << setw(20) << left << std->age;
-    cout << endl;
+// display data of a structure array pass by pointer
+//void Display(S *std) {
+//    cout << setw(20) << left << std->name;
+//    cout << setw(20) << left << std->age;
+//    cout << endl;
+//}
+
+// display data of a structutre using pointer not pass by
+void display(S* std, int length) {
+    S* ptr = &std[0];
+
+    for (int i = 0; i < length; i++)
+    {
+        cout << setw(20) << left << (ptr + i)->name;
+        cout << setw(20) << left << (ptr+i)->age;
+        cout << endl;
+    }
 }
 
 int main() {
@@ -43,10 +56,12 @@ int main() {
 
     cout << endl << setw(20) << left << "Name" << setw(10) << left << "Age" << endl;
 
-    for (int i = 0; i < n; i++)
+    /*for (int i = 0; i < n; i++)
     {
         Display(&std[i]);
-    }
+    }*/
+
+    display(std, n);
 
     delete[] std;
 
