@@ -68,3 +68,37 @@ int main() {
     return 0;
 
 }
+
+
+/*
+// string character swaping 
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string swapText(string s) {
+    char c1 = 'e', c2 = 'a';
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] == c1)
+        {
+            s[i] = c2;
+        }
+        else if (s[i]==c2)
+        {
+            s[i] = c1;
+        }
+    }
+    return s;
+}
+
+int main() {
+
+    string s = "muzeffar eli mirze";
+
+    cout << swapText(s);
+    return 0;
+}
+*/
