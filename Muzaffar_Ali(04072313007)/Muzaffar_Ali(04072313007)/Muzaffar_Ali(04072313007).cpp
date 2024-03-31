@@ -5,7 +5,7 @@ using namespace std;
 
 struct date {
 	int day;
-	int month;
+	char month[12];
 	int year;
 };
 
@@ -51,10 +51,10 @@ int main() {
 				cin >> std[i].subMarks[j];
 			}
 		}
-		file.write((char*)&SIZE, sizeof(SIZE));
-		file << endl;
-		file.write((char*)&std, sizeof(std));
 	}
+	file.write((char*)&SIZE, sizeof(SIZE));
+	file << endl;
+	file.write((char*)&std, sizeof(std));
 
 	file.close();
 
